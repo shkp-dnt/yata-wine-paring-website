@@ -14,22 +14,22 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
     >
       <div 
         className="h-48 w-full bg-cover bg-center" 
-        style={{ backgroundImage: `url(${wine.imageUrl})` }}
+        style={{ backgroundImage: `url(/images/wines/${wine.id}.jpg)` }}
       />
       
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
       
       <div className="absolute bottom-0 w-full p-4 text-white">
         <div className="flex items-center justify-between mb-2">
-          <span className="px-3 py-1 bg-[#7D0633] rounded-full text-xs font-medium">
+          <span className="px-3 py-1 bg-[#A5CD39] rounded-full text-xs font-medium">
             {wine.type}
           </span>
-          <span className="text-[#D4AF37] font-bold">
+          <span className="text-white font-bold">
             {wine.priceRange}
           </span>
         </div>
         
-        <h3 className="text-xl font-serif font-bold mb-1 group-hover:text-[#D4AF37] transition-colors duration-300">
+        <h3 className="text-xl font-serif font-bold mb-1 group-hover:text-white/80 transition-colors duration-300">
           {wine.name}
         </h3>
         
@@ -57,5 +57,3 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
     </Link>
   );
 };
-
-export default WineCard;

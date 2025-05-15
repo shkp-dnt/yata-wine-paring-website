@@ -8,6 +8,7 @@ import OccasionListPage from './pages/OccasionListPage';
 import FoodDetailPage from './pages/FoodDetailPage';
 import OccasionDetailPage from './pages/OccasionDetailPage';
 import WineDetailPage from './pages/WineDetailPage';
+import WineListPage from './pages/WineListPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/food/:id" element={<FoodDetailPage />} />
             <Route path="/occasion" element={<OccasionListPage />} />
             <Route path="/occasion/:id" element={<OccasionDetailPage />} />
+            <Route path="/wine" element={<WineListPage />} />
             <Route path="/wine/:id" element={<WineDetailPage />} />
           </Routes>
         </main>
@@ -30,4 +32,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
