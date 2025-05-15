@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { wines } from '../data/wines';
 import WineCard from '../components/WineCard';
 import { useTranslation } from 'react-i18next';
+import { WineTypeZh } from '../types';
 
 const WineListPage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isZh = i18n.language === 'zh';
   const [activeType, setActiveType] = useState<string | null>(null);
   const wineTypes = [...new Set(wines.map(wine => wine.type))];
   
@@ -14,6 +16,13 @@ const WineListPage: React.FC = () => {
   
   const formatTypeName = (type: string): string => {
     return type.charAt(0).toUpperCase() + type.slice(1);
+  };
+
+  const displayType = (type: WineType) => {
+    if (isZh) {
+      return WineTypeZh[type];
+    }
+    return formatTypeName(type);
   };
 
   return (
@@ -54,7 +63,7 @@ const WineListPage: React.FC = () => {
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                {formatTypeName(type)}
+                {displayType(type)}
               </button>
             ))}
           </div>

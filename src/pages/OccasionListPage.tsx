@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import CategoryCard from '../components/CategoryCard';
 import { occasions } from '../data/occasions';
 import { useTranslation } from 'react-i18next';
+import { OccasionCategoryZh } from '../types';
 
 const OccasionListPage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isZh = i18n.language === 'zh';
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   
   const occasionCategories = [...new Set(occasions.map(occasion => occasion.category))];
@@ -18,6 +20,13 @@ const OccasionListPage: React.FC = () => {
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
+  };
+
+  const displayCategory = (category: OccasionCategory) => {
+    if (isZh) {
+      return OccasionCategoryZh[category];
+    }
+    return formatCategoryName(category);
   };
 
   return (
@@ -58,7 +67,7 @@ const OccasionListPage: React.FC = () => {
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                {formatCategoryName(category)}
+                {displayCategory(category)}
               </button>
             ))}
           </div>
