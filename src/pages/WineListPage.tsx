@@ -69,3 +69,5 @@ const WineListPage: React.FC = () => {
     </div>
   );
 };
+
+export default WineListPage

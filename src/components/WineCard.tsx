@@ -57,3 +57,5 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
     </Link>
   );
 };
+
+export default WineCard
