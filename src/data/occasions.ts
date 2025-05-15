@@ -5,54 +5,54 @@ export const occasions: Occasion[] = [
     id: 'celebration-wedding',
     category: 'celebration',
     name: 'Wedding',
-    imageUrl: 'https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg'
+    imageUrl: '/images/occasions/celebration-wedding.jpg'
   },
   {
     id: 'celebration-anniversary',
     category: 'celebration',
     name: 'Anniversary',
-    imageUrl: 'https://images.pexels.com/photos/1243337/pexels-photo-1243337.jpeg'
+    imageUrl: '/images/occasions/celebration-anniversary.jpg'
   },
   {
     id: 'celebration-birthday',
     category: 'celebration',
     name: 'Birthday',
-    imageUrl: 'https://images.pexels.com/photos/369267/pexels-photo-369267.jpeg'
+    imageUrl: '/images/occasions/celebration-birthday.jpg'
   },
   {
     id: 'casual-dinner',
     category: 'casual',
     name: 'Dinner with Friends',
-    imageUrl: 'https://images.pexels.com/photos/5637599/pexels-photo-5637599.jpeg'
+    imageUrl: '/images/occasions/casual-dinner.jpg'
   },
   {
     id: 'casual-picnic',
     category: 'casual',
     name: 'Picnic',
-    imageUrl: 'https://images.pexels.com/photos/6092556/pexels-photo-6092556.jpeg'
+    imageUrl: '/images/occasions/casual-picnic.jpg'
   },
   {
     id: 'romantic-date',
     category: 'romantic',
     name: 'Date Night',
-    imageUrl: 'https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg'
+    imageUrl: '/images/occasions/romantic-date.jpg'
   },
   {
     id: 'formal-business',
     category: 'formal',
     name: 'Business Dinner',
-    imageUrl: 'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg'
+    imageUrl: '/images/occasions/formal-business.jpg'
   },
   {
     id: 'outdoor-beach',
     category: 'outdoor',
     name: 'Beach Party',
-    imageUrl: 'https://images.pexels.com/photos/1021068/pexels-photo-1021068.jpeg'
+    imageUrl: '/images/occasions/outdoor-beach.jpg'
   },
   {
     id: 'outdoor-barbecue',
     category: 'outdoor',
     name: 'Barbecue',
-    imageUrl: 'https://images.pexels.com/photos/1309067/pexels-photo-1309067.jpeg'
+    imageUrl: '/images/occasions/outdoor-barbecue.jpg'
   }
 ];

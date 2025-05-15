@@ -11,7 +11,7 @@ export const wines: Wine[] = [
     priceRange: '$$$',
     description: 'A full-bodied Cabernet with rich tannins and robust flavors.',
     tastingNotes: ['Black currant', 'Cedar', 'Tobacco', 'Dark chocolate'],
-    imageUrl: 'https://images.pexels.com/photos/2912108/pexels-photo-2912108.jpeg'
+    imageUrl: '/images/wines/cab-sauv-1.jpg'
   },
   {
     id: 'chard-1',
@@ -23,7 +23,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Buttery and rich with balanced oak influence.',
     tastingNotes: ['Vanilla', 'Butter', 'Baked apple', 'Toasted hazelnut'],
-    imageUrl: 'https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg'
+    imageUrl: '/images/wines/chard-1.jpg'
   },
   {
     id: 'pinot-noir-1',
@@ -35,7 +35,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Silky and elegant with bright fruit and earthy undertones.',
     tastingNotes: ['Cherry', 'Raspberry', 'Forest floor', 'Clove'],
-    imageUrl: 'https://images.pexels.com/photos/2702805/pexels-photo-2702805.jpeg'
+    imageUrl: '/images/wines/pinot-noir-1.jpg'
   },
   {
     id: 'sauv-blanc-1',
@@ -47,7 +47,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Bright and zesty with vibrant acidity.',
     tastingNotes: ['Grapefruit', 'Lime', 'Green apple', 'Fresh herbs'],
-    imageUrl: 'https://images.pexels.com/photos/4871012/pexels-photo-4871012.jpeg'
+    imageUrl: '/images/wines/sauv-blanc-1.jpg'
   },
   {
     id: 'malbec-1',
@@ -59,7 +59,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Intense and fruit-forward with smooth tannins.',
     tastingNotes: ['Blackberry', 'Plum', 'Violet', 'Mocha'],
-    imageUrl: 'https://images.pexels.com/photos/6310072/pexels-photo-6310072.jpeg'
+    imageUrl: '/images/wines/malbec-1.jpg'
   },
   {
     id: 'prosecco-1',
@@ -71,7 +71,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Lively and refreshing with delicate bubbles.',
     tastingNotes: ['Green apple', 'Pear', 'Peach', 'White flowers'],
-    imageUrl: 'https://images.pexels.com/photos/10580198/pexels-photo-10580198.jpeg'
+    imageUrl: '/images/wines/prosecco-1.jpg'
   },
   {
     id: 'rose-1',
@@ -83,7 +83,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Dry and crisp with subtle red fruit notes.',
     tastingNotes: ['Strawberry', 'Watermelon', 'Rose petal', 'Citrus zest'],
-    imageUrl: 'https://images.pexels.com/photos/1964871/pexels-photo-1964871.jpeg'
+    imageUrl: '/images/wines/rose-1.jpg'
   },
   {
     id: 'rioja-1',
@@ -95,7 +95,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Well-balanced with complex flavors and aging potential.',
     tastingNotes: ['Red cherry', 'Vanilla', 'Leather', 'Dried herbs'],
-    imageUrl: 'https://images.pexels.com/photos/7763818/pexels-photo-7763818.jpeg'
+    imageUrl: '/images/wines/rioja-1.jpg'
   },
   {
     id: 'port-1',
@@ -107,7 +107,7 @@ export const wines: Wine[] = [
     priceRange: '$$$',
     description: 'Rich and sweet with concentrated flavors.',
     tastingNotes: ['Black cherry', 'Fig', 'Chocolate', 'Spice'],
-    imageUrl: 'https://images.pexels.com/photos/5490998/pexels-photo-5490998.jpeg'
+    imageUrl: '/images/wines/port-1.jpg'
   },
   {
     id: 'riesling-1',
@@ -119,7 +119,7 @@ export const wines: Wine[] = [
     priceRange: '$$',
     description: 'Slightly sweet with vibrant acidity and mineral notes.',
     tastingNotes: ['Peach', 'Apricot', 'Honey', 'Wet stone'],
-    imageUrl: 'https://images.pexels.com/photos/11845159/pexels-photo-11845159.jpeg'
+    imageUrl: '/images/wines/riesling-1.jpg'
   },
   {
     id: 'syrah-1',
@@ -131,6 +131,6 @@ export const wines: Wine[] = [
     priceRange: '$$$',
     description: 'Powerful and spicy with dark fruit flavors.',
     tastingNotes: ['Blackberry', 'Black pepper', 'Olive', 'Smoked meat'],
-    imageUrl: 'https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg'
+    imageUrl: '/images/wines/syrah-1.jpg'
   }
 ];
