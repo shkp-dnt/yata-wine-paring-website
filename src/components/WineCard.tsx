@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wine as WineType } from '../types';
+import { Link } from 'react-router-dom';
 
 interface WineCardProps {
   wine: WineType;
@@ -7,7 +8,10 @@ interface WineCardProps {
 
 const WineCard: React.FC<WineCardProps> = ({ wine }) => {
   return (
-    <div className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-white">
+    <Link 
+      to={`/wine/${wine.id}`}
+      className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-white"
+    >
       <div 
         className="h-48 w-full bg-cover bg-center" 
         style={{ backgroundImage: `url(${wine.imageUrl})` }}
@@ -50,7 +54,7 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

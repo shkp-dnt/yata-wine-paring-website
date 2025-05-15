@@ -7,6 +7,7 @@ import FoodListPage from './pages/FoodListPage';
 import OccasionListPage from './pages/OccasionListPage';
 import FoodDetailPage from './pages/FoodDetailPage';
 import OccasionDetailPage from './pages/OccasionDetailPage';
+import WineDetailPage from './pages/WineDetailPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/food/:id" element={<FoodDetailPage />} />
             <Route path="/occasion" element={<OccasionListPage />} />
             <Route path="/occasion/:id" element={<OccasionDetailPage />} />
+            <Route path="/wine/:id" element={<WineDetailPage />} />
           </Routes>
         </main>
         <Footer />
@@ -27,5 +29,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

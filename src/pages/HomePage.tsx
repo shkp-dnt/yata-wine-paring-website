@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Wine, Utensils, Calendar } from 'lucide-react';
+import WineCard from '../components/WineCard';
+import { wines } from '../data/wines';
 
 const HomePage: React.FC = () => {
+  const featuredWines = wines.slice(0, 4);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -129,6 +133,21 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Wines Section */}
+      <section className="py-16 bg-[#F5F5F5]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-serif font-bold text-center text-[#1B512D] mb-8">
+            Featured Wines
+          </h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredWines.map(wine => (
+              <WineCard key={wine.id} wine={wine} />
+            ))}
           </div>
         </div>
       </section>
