@@ -27,6 +27,9 @@
     "wineCollection": "Our Wine Collection",
     "foodPairingsTitle": "Wine Pairings by Food",
     "occasionPairingsTitle": "Wine Pairings by Occasion",
+    "backToFoods": "Back to Foods",
+    "backToOccasions": "Back to Occasions",
+    "perfectWineFor": "Prefect wine for {{name}}",
     "wineRecommendationsFor": "Perfect wine recommendations for {{name}}"
   }
 }
