@@ -4,8 +4,10 @@ import { ArrowLeft } from 'lucide-react';
 import { getFoodById, getWinesByFoodId } from '../utils/pairingUtils';
 import RecommendationSection from '../components/RecommendationSection';
 import { Food, Wine } from '../types';
+import { useTranslation } from 'react-i18next';
 
 const FoodDetailPage: React.FC = () => {
+  const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [food, setFood] = useState<Food | null>(null);
@@ -28,13 +30,13 @@ const FoodDetailPage: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-700 mb-2">Food not found</h2>
+          <h2 className="text-2xl font-bold text-gray-700 mb-2">{t('common.notFound')}</h2>
           <button
             onClick={() => navigate('/food')}
             className="text-[#7D0633] hover:text-[#9A1750] flex items-center gap-1 mx-auto"
           >
             <ArrowLeft size={16} />
-            <span>Back to all foods</span>
+            <span>{t('common.backToFoods')}</span>
           </button>
         </div>
       </div>
@@ -43,7 +45,6 @@ const FoodDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <div 
         className="relative h-72 md:h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${food.imageUrl})` }}
@@ -56,15 +57,15 @@ const FoodDetailPage: React.FC = () => {
             className="text-white hover:text-[#D4AF37] flex items-center gap-1 mb-4 self-start transition-colors duration-300"
           >
             <ArrowLeft size={16} />
-            <span>Back to all foods</span>
+            <span>{t('common.backToFoods')}</span>
           </button>
           
           <h1 className="text-3xl md:text-5xl font-serif font-bold text-white mb-2">
-            {food.name}
+            {food.nameZh || food.name}
           </h1>
           
           <p className="text-lg md:text-xl text-gray-200">
-            Perfect wine pairings for {food.name.toLowerCase()}
+            {t('common.wineRecommendationsFor', { name: food.nameZh || food.name })}
           </p>
         </div>
       </div>
@@ -72,7 +73,7 @@ const FoodDetailPage: React.FC = () => {
       <RecommendationSection 
         wines={wines} 
         reason={reason} 
-        title={`Wine Recommendations for ${food.name}`} 
+        title={t('common.wineRecommendationsFor', { name: food.nameZh || food.name })} 
       />
     </div>
   );

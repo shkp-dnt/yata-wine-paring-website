@@ -30,9 +30,6 @@
     "backToFoods": "返回所有美食",
     "backToOccasions": "返回所有場合",
     "perfectWineFor": "為{{name}}推薦的完美葡萄酒",
-    "region": "產區",
-    "variety": "品種",
-    "description": "描述",
-    "priceRange": "價格範圍"
+    "wineRecommendationsFor": "為{{name}}推薦的葡萄酒"
   }
 }
