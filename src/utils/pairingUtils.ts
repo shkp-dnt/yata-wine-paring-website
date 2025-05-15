@@ -26,13 +26,14 @@ export const getWinesByFoodId = (foodId: string): {wines: Wine[], reason: string
   };
 };
 
-export const getWinesByOccasionId = (occasionId: string): {wines: Wine[], reason: string} => {
+export const getWinesByOccasionId = (occasionId: string): {wines: Wine[], reason: string, reasonZh: string} => {
   const pairing = pairings.find(p => p.occasionId === occasionId);
   
   if (!pairing) {
     return {
       wines: [],
-      reason: 'No specific pairings found for this occasion.'
+      reason: 'No specific pairings found for this occasion.',
+      reasonZh: '找不到此場合的特定搭配。'
     };
   }
   
@@ -42,7 +43,8 @@ export const getWinesByOccasionId = (occasionId: string): {wines: Wine[], reason
   
   return {
     wines: recommendedWines,
-    reason: pairing.reason
+    reason: pairing.reason,
+    reasonZh: pairing.reasonZh
   };
 };
 
