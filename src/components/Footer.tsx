@@ -1,7 +1,10 @@
 import React from 'react';
 import { Wine } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-[#A5CD39] text-white py-8 mt-auto">
       <div className="container mx-auto px-4">
@@ -12,8 +15,8 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="text-sm text-white/90">
-            <p>© {new Date().getFullYear()} YATA's Choice. All rights reserved.</p>
-            <p className="mt-1">Enjoy responsibly. Must be 21+ to consume alcohol.</p>
+            <p>{t('footer.rights', { year: new Date().getFullYear() })}</p>
+            <p className="mt-1">{t('footer.disclaimer')}</p>
           </div>
         </div>
       </div>
