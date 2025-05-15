@@ -23,6 +23,9 @@
     "notFound": "Not found",
     "goBack": "Go back",
     "sommelierNote": "Sommelier's Note",
-    "tastingNotes": "Tasting Notes"
+    "tastingNotes": "Tasting Notes",
+    "wineCollection": "Our Wine Collection",
+    "foodPairingsTitle": "Wine Pairings by Food",
+    "occasionPairingsTitle": "Wine Pairings by Occasion"
   }
 }
