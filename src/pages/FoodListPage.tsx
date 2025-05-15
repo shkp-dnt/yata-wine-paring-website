@@ -69,6 +69,7 @@ const FoodListPage: React.FC = () => {
               key={food.id}
               id={food.id}
               name={food.name}
+              nameZh={food.nameZh}  // Add this line
               imageUrl={food.imageUrl}
               type="food"
             />

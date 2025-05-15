@@ -70,6 +70,7 @@ const OccasionListPage: React.FC = () => {
               key={occasion.id}
               id={occasion.id}
               name={occasion.name}
+              nameZh={occasion.nameZh}  // Add this line
               imageUrl={occasion.imageUrl}
               type="occasion"
             />
