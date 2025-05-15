@@ -4,13 +4,14 @@ import { occasions } from '../data/occasions';
 import { pairings } from '../data/pairings';
 import { Wine, Food, Occasion } from '../types';
 
-export const getWinesByFoodId = (foodId: string): {wines: Wine[], reason: string} => {
+export const getWinesByFoodId = (foodId: string): {wines: Wine[], reason: string, reasonZh: string} => {
   const pairing = pairings.find(p => p.foodId === foodId);
   
   if (!pairing) {
     return {
       wines: [],
-      reason: 'No specific pairings found for this food.'
+      reason: 'No specific pairings found for this food.',
+      reasonZh: '找不到此食物的特定搭配。'
     };
   }
   
@@ -20,7 +21,8 @@ export const getWinesByFoodId = (foodId: string): {wines: Wine[], reason: string
   
   return {
     wines: recommendedWines,
-    reason: pairing.reason
+    reason: pairing.reason,
+    reasonZh: pairing.reasonZh
   };
 };
 

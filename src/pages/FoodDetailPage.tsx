@@ -13,15 +13,17 @@ const FoodDetailPage: React.FC = () => {
   const [food, setFood] = useState<Food | null>(null);
   const [wines, setWines] = useState<Wine[]>([]);
   const [reason, setReason] = useState<string>('');
+  const [reasonZh, setReasonZh] = useState<string>('');
 
   useEffect(() => {
     if (id) {
       const foodItem = getFoodById(id);
       if (foodItem) {
         setFood(foodItem);
-        const { wines: recommendedWines, reason: pairingReason } = getWinesByFoodId(id);
+        const { wines: recommendedWines, reason: pairingReason, reasonZh: pairingReasonZh } = getWinesByFoodId(id);
         setWines(recommendedWines);
         setReason(pairingReason);
+        setReasonZh(pairingReasonZh);
       }
     }
   }, [id]);
@@ -72,8 +74,10 @@ const FoodDetailPage: React.FC = () => {
       
       <RecommendationSection 
         wines={wines} 
-        reason={reason} 
-        title={t('common.wineRecommendationsFor', { name: food.nameZh || food.name })} 
+        reason={reason}
+        reasonZh={reasonZh}
+        title={t('common.wineRecommendationsFor', { name: food.nameZh || food.name })}
+        titleZh={t('common.wineRecommendationsFor', { name: food.nameZh || food.name })}
       />
     </div>
   );
