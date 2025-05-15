@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import CategoryCard from '../components/CategoryCard';
-import { foods, getFoodCategories, getFoodsByCategory } from '../data/foods';
+import { foods, getFoodCategories } from '../data/foods';
+import { useTranslation } from 'react-i18next';
 
 const FoodListPage: React.FC = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const foodCategories = getFoodCategories();
   
@@ -26,13 +28,12 @@ const FoodListPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-serif font-bold text-white text-center">
-            Wine Pairings by Food
+            {t('common.foodPairingsTitle')}
           </h1>
         </div>
       </div>
       
       <div className="container mx-auto px-4 py-8">
-        {/* Category Filter */}
         <div className="mb-8 overflow-x-auto py-2">
           <div className="flex gap-2 min-w-max">
             <button
@@ -43,7 +44,7 @@ const FoodListPage: React.FC = () => {
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              All Foods
+              {t('common.allFoods')}
             </button>
             
             {foodCategories.map(category => (
@@ -62,7 +63,6 @@ const FoodListPage: React.FC = () => {
           </div>
         </div>
         
-        {/* Food Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {displayedFoods.map(food => (
             <CategoryCard

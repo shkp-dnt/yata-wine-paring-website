@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { wines } from '../data/wines';
 import WineCard from '../components/WineCard';
+import { useTranslation } from 'react-i18next';
 
 const WineListPage: React.FC = () => {
+  const { t } = useTranslation();
   const [activeType, setActiveType] = useState<string | null>(null);
   const wineTypes = [...new Set(wines.map(wine => wine.type))];
   
@@ -23,13 +25,12 @@ const WineListPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-serif font-bold text-white text-center">
-            Our Wine Collection
+            {t('common.wineCollection')}
           </h1>
         </div>
       </div>
       
       <div className="container mx-auto px-4 py-8">
-        {/* Type Filter */}
         <div className="mb-8 overflow-x-auto py-2">
           <div className="flex gap-2 min-w-max">
             <button
@@ -40,7 +41,7 @@ const WineListPage: React.FC = () => {
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              All Wines
+              {t('common.allWines')}
             </button>
             
             {wineTypes.map(type => (
@@ -59,7 +60,6 @@ const WineListPage: React.FC = () => {
           </div>
         </div>
         
-        {/* Wine Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {displayedWines.map(wine => (
             <WineCard key={wine.id} wine={wine} />
@@ -70,4 +70,4 @@ const WineListPage: React.FC = () => {
   );
 };
 
-export default WineListPage
+export default WineListPage;

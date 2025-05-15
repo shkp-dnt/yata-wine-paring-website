@@ -1,56 +1,56 @@
 import React from 'react';
 import { Wine as WineType } from '../types';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 interface WineCardProps {
   wine: WineType;
 }
 
 const WineCard: React.FC<WineCardProps> = ({ wine }) => {
+  const { t } = useTranslation();
+
   return (
     <Link 
       to={`/wine/${wine.id}`}
-      className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-white"
+      className="flex flex-col rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-white overflow-hidden"
     >
       <div 
-        className="h-48 w-full bg-cover bg-center" 
+        className="h-48 w-full bg-cover bg-center"
         style={{ backgroundImage: `url(/images/wines/${wine.id}.jpg)` }}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-      
-      <div className="absolute bottom-0 w-full p-4 text-white">
+      <div className="p-4">
         <div className="flex items-center justify-between mb-2">
-          <span className="px-3 py-1 bg-[#A5CD39] rounded-full text-xs font-medium">
+          <span className="px-3 py-1 bg-[#A5CD39] text-white rounded-full text-xs font-medium">
             {wine.type}
           </span>
-          <span className="text-white font-bold">
+          <span className="text-[#D4AF37] font-bold">
             {wine.priceRange}
           </span>
         </div>
         
-        <h3 className="text-xl font-serif font-bold mb-1 group-hover:text-white/80 transition-colors duration-300">
+        <h3 className="text-xl font-serif font-bold text-gray-900 mb-1 group-hover:text-[#7D0633] transition-colors duration-300">
           {wine.name}
         </h3>
         
-        <p className="text-sm font-medium opacity-90 mb-1">
+        <p className="text-sm font-medium text-gray-600 mb-2">
           {wine.variety} · {wine.region}, {wine.country}
         </p>
         
-        <div className="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500">
-          <p className="text-sm mt-2 opacity-90">{wine.description}</p>
-          <div className="mt-2">
-            <p className="text-xs font-medium">Tasting Notes:</p>
-            <div className="flex flex-wrap gap-1 mt-1">
-              {wine.tastingNotes.map((note, index) => (
-                <span 
-                  key={index} 
-                  className="px-2 py-1 bg-black/30 rounded text-xs"
-                >
-                  {note}
-                </span>
-              ))}
-            </div>
+        <p className="text-sm text-gray-700 mb-3">{wine.description}</p>
+        
+        <div>
+          <p className="text-xs font-medium text-gray-600 mb-1">{t('common.tastingNotes')}:</p>
+          <div className="flex flex-wrap gap-1">
+            {wine.tastingNotes.map((note, index) => (
+              <span 
+                key={index} 
+                className="px-2 py-1 bg-gray-100 rounded text-xs text-gray-700"
+              >
+                {note}
+              </span>
+            ))}
           </div>
         </div>
       </div>
@@ -58,4 +58,4 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
   );
 };
 
-export default WineCard
+export default WineCard;

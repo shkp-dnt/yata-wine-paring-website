@@ -16,6 +16,7 @@ i18n
         translation: zh
       }
     },
+    lng: 'zh', // Set default language to Chinese
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false

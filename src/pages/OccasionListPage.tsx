@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import CategoryCard from '../components/CategoryCard';
 import { occasions } from '../data/occasions';
+import { useTranslation } from 'react-i18next';
 
 const OccasionListPage: React.FC = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   
   const occasionCategories = [...new Set(occasions.map(occasion => occasion.category))];
@@ -27,13 +29,12 @@ const OccasionListPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-serif font-bold text-white text-center">
-            Wine Pairings by Occasion
+            {t('common.occasionPairingsTitle')}
           </h1>
         </div>
       </div>
       
       <div className="container mx-auto px-4 py-8">
-        {/* Category Filter */}
         <div className="mb-8 overflow-x-auto py-2">
           <div className="flex gap-2 min-w-max">
             <button
@@ -44,7 +45,7 @@ const OccasionListPage: React.FC = () => {
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              All Occasions
+              {t('common.allOccasions')}
             </button>
             
             {occasionCategories.map(category => (
@@ -63,7 +64,6 @@ const OccasionListPage: React.FC = () => {
           </div>
         </div>
         
-        {/* Occasion Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {displayedOccasions.map(occasion => (
             <CategoryCard

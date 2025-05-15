@@ -23,6 +23,16 @@
     "notFound": "未找到",
     "goBack": "返回",
     "sommelierNote": "品酒師筆記",
-    "tastingNotes": "品嚐筆記"
+    "tastingNotes": "品嚐筆記",
+    "wineCollection": "我們的葡萄酒系列",
+    "foodPairingsTitle": "按食物搭配葡萄酒",
+    "occasionPairingsTitle": "按場合搭配葡萄酒",
+    "backToFoods": "返回所有美食",
+    "backToOccasions": "返回所有場合",
+    "perfectWineFor": "為{{name}}推薦的完美葡萄酒",
+    "region": "產區",
+    "variety": "品種",
+    "description": "描述",
+    "priceRange": "價格範圍"
   }
 }
