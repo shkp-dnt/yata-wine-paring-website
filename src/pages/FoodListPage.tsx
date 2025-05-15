@@ -69,7 +69,7 @@ const FoodListPage: React.FC = () => {
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                {formatCategoryName(category)}
+                {displayCategory(category)}
               </button>
             ))}
           </div>
