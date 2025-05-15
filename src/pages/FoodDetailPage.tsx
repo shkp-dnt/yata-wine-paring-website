@@ -7,7 +7,8 @@ import { Food, Wine } from '../types';
 import { useTranslation } from 'react-i18next';
 
 const FoodDetailPage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isZh = i18n.language === 'zh';
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [food, setFood] = useState<Food | null>(null);
@@ -63,11 +64,11 @@ const FoodDetailPage: React.FC = () => {
           </button>
           
           <h1 className="text-3xl md:text-5xl font-serif font-bold text-white mb-2">
-            {food.nameZh || food.name}
+            {isZh ? food.nameZh : food.name}
           </h1>
           
           <p className="text-lg md:text-xl text-gray-200">
-            {t('common.wineRecommendationsFor', { name: food.nameZh || food.name })}
+            {t('common.wineRecommendationsFor', { name: isZh ? food.nameZh : food.name })}
           </p>
         </div>
       </div>
@@ -76,8 +77,8 @@ const FoodDetailPage: React.FC = () => {
         wines={wines} 
         reason={reason}
         reasonZh={reasonZh}
-        title={t('common.wineRecommendationsFor', { name: food.nameZh || food.name })}
-        titleZh={t('common.wineRecommendationsFor', { name: food.nameZh || food.name })}
+        title={t('common.wineRecommendationsFor', { name: isZh ? food.nameZh : food.name })}
+        titleZh={t('common.wineRecommendationsFor', { name: isZh ? food.nameZh : food.name })}
       />
     </div>
   );

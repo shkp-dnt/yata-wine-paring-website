@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wine as WineType } from '../types';
+import { Wine as WineType, WineTypeZh } from '../types';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -24,7 +24,7 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
       <div className="p-4">
         <div className="flex items-center justify-between mb-2">
           <span className="px-3 py-1 bg-[#A5CD39] text-white rounded-full text-xs font-medium">
-            {isZh ? wine.typeZh : wine.type}
+            {isZh ? WineTypeZh[wine.type] : wine.type}
           </span>
           <span className="text-[#D4AF37] font-bold">
             {wine.priceRange}
