@@ -1,0 +1,28 @@
+{
+  "header": {
+    "foodPairings": "Food Pairings",
+    "occasions": "Occasions",
+    "wines": "Wines"
+  },
+  "home": {
+    "title": "Discover Your Perfect Wine Pairing",
+    "subtitle": "Expert wine recommendations tailored to your meal or occasion",
+    "foodPairings": "Food Pairings",
+    "occasions": "Occasions",
+    "perfectWine": "The Perfect Wine for Every Moment"
+  },
+  "footer": {
+    "rights": "© {{year}} YATA's Choice. All rights reserved.",
+    "disclaimer": "Enjoy responsibly. Must be 21+ to consume alcohol."
+  },
+  "common": {
+    "back": "Back",
+    "allWines": "All Wines",
+    "allFoods": "All Foods",
+    "allOccasions": "All Occasions",
+    "notFound": "Not found",
+    "goBack": "Go back",
+    "sommelierNote": "Sommelier's Note",
+    "tastingNotes": "Tasting Notes"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "header": {
+    "foodPairings": "美食搭配",
+    "occasions": "場合",
+    "wines": "葡萄酒"
+  },
+  "home": {
+    "title": "發現您的完美葡萄酒搭配",
+    "subtitle": "為您的餐點或場合量身打造的專業葡萄酒推薦",
+    "foodPairings": "美食搭配",
+    "occasions": "場合",
+    "perfectWine": "每一刻的完美葡萄酒"
+  },
+  "footer": {
+    "rights": "© {{year}} YATA's Choice。版權所有。",
+    "disclaimer": "理性飲酒。需年滿21歲才能飲用酒精。"
+  },
+  "common": {
+    "back": "返回",
+    "allWines": "所有葡萄酒",
+    "allFoods": "所有美食",
+    "allOccasions": "所有場合",
+    "notFound": "未找到",
+    "goBack": "返回",
+    "sommelierNote": "品酒師筆記",
+    "tastingNotes": "品嚐筆記"
+  }
+}

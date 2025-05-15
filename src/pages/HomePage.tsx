@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Wine, Utensils, Calendar } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const HomePage: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -15,20 +18,20 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-4">
-              Discover Your Perfect Wine Pairing
+              {t('home.title')}
             </h1>
             
             <p className="text-xl text-gray-200 mb-8">
-              Expert wine recommendations tailored to your meal or occasion
+              {t('home.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/food"
-                className="bg-[#A5CD39] hover:bg-[#8DAF2D] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 text-center flex items-center justify-center gap-2"
+                className="bg-[#AACD53] hover:bg-[#99BC42] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 text-center flex items-center justify-center gap-2"
               >
                 <Utensils size={20} />
-                Food Pairings
+                {t('home.foodPairings')}
               </Link>
               
               <Link 
@@ -36,49 +39,8 @@ const HomePage: React.FC = () => {
                 className="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-6 rounded-lg transition-colors duration-300 text-center flex items-center justify-center gap-2"
               >
                 <Calendar size={20} />
-                Occasions
+                {t('home.occasions')}
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* How It Works Section */}
-      <section className="py-16 bg-[#F5F5F5]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif font-bold text-center text-[#A5CD39] mb-12">
-            How It Works
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-[#A5CD39] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Choose Your Category</h3>
-              <p className="text-gray-600">
-                Select between food pairings or occasions to find the perfect wine.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-[#A5CD39] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Select Your Option</h3>
-              <p className="text-gray-600">
-                Choose a specific food type or occasion from our curated selection.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-[#A5CD39] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Discover Wines</h3>
-              <p className="text-gray-600">
-                Get personalized wine recommendations with expert tasting notes.
-              </p>
             </div>
           </div>
         </div>
@@ -87,8 +49,8 @@ const HomePage: React.FC = () => {
       {/* Featured Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif font-bold text-center text-[#A5CD39] mb-8">
-            The Perfect Wine for Every Moment
+          <h2 className="text-3xl font-serif font-bold text-center text-[#AACD53] mb-8">
+            {t('home.perfectWine')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -100,13 +62,12 @@ const HomePage: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-0 p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Food Pairings</h3>
-                <p className="text-gray-200 mb-4">Find the perfect wine for your favorite dishes</p>
+                <h3 className="text-2xl font-bold text-white mb-2">{t('header.foodPairings')}</h3>
                 <Link 
                   to="/food"
                   className="inline-block bg-white hover:bg-gray-100 text-gray-900 font-bold py-2 px-4 rounded-lg transition-colors duration-300"
                 >
-                  Explore Food Pairings
+                  {t('header.foodPairings')}
                 </Link>
               </div>
             </div>
@@ -119,13 +80,12 @@ const HomePage: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-0 p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Special Occasions</h3>
-                <p className="text-gray-200 mb-4">Discover wines that elevate your celebrations</p>
+                <h3 className="text-2xl font-bold text-white mb-2">{t('header.occasions')}</h3>
                 <Link 
                   to="/occasion"
                   className="inline-block bg-white hover:bg-gray-100 text-gray-900 font-bold py-2 px-4 rounded-lg transition-colors duration-300"
                 >
-                  Explore Occasions
+                  {t('header.occasions')}
                 </Link>
               </div>
             </div>
@@ -136,4 +96,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage
+export default HomePage;
