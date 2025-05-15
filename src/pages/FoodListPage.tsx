@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CategoryCard from '../components/CategoryCard';
 import { foods, getFoodCategories } from '../data/foods';
 import { useTranslation } from 'react-i18next';
+import { FoodCategoryZh } from '../types';
 
 const FoodListPage: React.FC = () => {
   const { t } = useTranslation();
@@ -19,6 +20,17 @@ const FoodListPage: React.FC = () => {
       .join(' ');
   };
 
+  // Inside your component where you display the category
+  const { i18n } = useTranslation();
+  const isZh = i18n.language === 'zh';
+  
+  const displayCategory = (category: FoodCategory) => {
+    if (isZh) {
+      return FoodCategoryZh[category];
+    }
+    return formatCategoryName(category);
+  };
+  
   return (
     <div className="min-h-screen bg-gray-50">
       <div 

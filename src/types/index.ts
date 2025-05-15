@@ -31,13 +31,16 @@ export type FoodCategory =
   | 'cheese' 
   | 'dessert';
 
-export interface Food {
-  id: string;
-  category: FoodCategory;
-  name: string;
-  nameZh: string;
-  imageUrl: string;
-}
+export const FoodCategoryZh: Record<FoodCategory, string> = {
+  beef: '牛肉',
+  pork: '豬肉',
+  poultry: '家禽',
+  lamb: '羊肉',
+  seafood: '海鮮',
+  vegetarian: '素食',
+  cheese: '奶酪',
+  dessert: '甜點'
+};
 
 export type OccasionCategory = 
   | 'celebration' 
@@ -45,6 +48,32 @@ export type OccasionCategory =
   | 'romantic' 
   | 'formal' 
   | 'outdoor';
+
+export const OccasionCategoryZh: Record<OccasionCategory, string> = {
+  celebration: '慶祝',
+  casual: '休閒',
+  romantic: '浪漫',
+  formal: '正式',
+  outdoor: '戶外'
+};
+
+export type WineType = 'red' | 'white' | 'rosé' | 'sparkling' | 'dessert';
+
+export const WineTypeZh: Record<WineType, string> = {
+  red: '紅葡萄酒',
+  white: '白葡萄酒',
+  rosé: '桃紅葡萄酒',
+  sparkling: '氣泡酒',
+  dessert: '甜酒'
+};
+
+export interface Food {
+  id: string;
+  category: FoodCategory;
+  name: string;
+  nameZh: string;
+  imageUrl: string;
+}
 
 export interface Occasion {
   id: string;
