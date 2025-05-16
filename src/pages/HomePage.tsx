@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section 
         className="relative min-h-[500px] flex items-center bg-cover bg-center"
-        style={{ backgroundImage: `url(/images/hero-wine.jpg)` }}
+        style={{ backgroundImage: `url(/images/homepage.jpg)` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
         
