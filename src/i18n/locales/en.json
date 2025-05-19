@@ -2,7 +2,7 @@
   "header": {
     "foodPairings": "Food Pairings",
     "occasions": "Occasions",
-    "wines": "Wines"
+    "wines": "HOT PICKS"
   },
   "home": {
     "title": "Discover Your Perfect Wine Pairing",
@@ -24,7 +24,7 @@
     "goBack": "Go back",
     "sommelierNote": "Sommelier's Note",
     "tastingNotes": "Tasting Notes",
-    "wineCollection": "Our Wine Collection",
+    "wineCollection": "Best Sellers",
     "foodPairingsTitle": "Wine Pairings by Food",
     "occasionPairingsTitle": "Wine Pairings by Occasion",
     "backToFoods": "Back to Foods",

@@ -2,7 +2,7 @@
   "header": {
     "foodPairings": "美食搭配",
     "occasions": "場合",
-    "wines": "葡萄酒"
+    "wines": "今期推薦"
   },
   "home": {
     "title": "發現您的完美葡萄酒搭配",
@@ -24,7 +24,7 @@
     "goBack": "返回",
     "sommelierNote": "品酒師筆記",
     "tastingNotes": "品嚐筆記",
-    "wineCollection": "我們的葡萄酒系列",
+    "wineCollection": "熱賣之選",
     "foodPairingsTitle": "按食物搭配葡萄酒",
     "occasionPairingsTitle": "按場合搭配葡萄酒",
     "backToFoods": "返回所有美食",
